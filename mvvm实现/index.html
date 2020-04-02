@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="app">
+        <input type="text" v-model="className.name">
+        <h1>姓名:{{className.name}}</h1>
+        <h3>年龄:{{className.age}}</h3>
+        <ul>
+            <li>1</li>
+            <li>2</li>
+        </ul>
+
+    </div>
+    <script src="./MVVM.js"></script>
+    <script>
+
+        //编写Observer类
+        let vm = new Vue({
+            el: "#app",
+            data: {
+                className: {
+                    name: "小纪",
+                    age: 20
+                }
+            }
+        })
+
+        //数据属性
+        // let data = {
+        //     name: "小徐",
+        //     age: 20
+        // }
+        // Object.defineProperty(data, "name", {
+        //     value: "小纪"
+        // })
+
+
+        //访问器属性
+
+        // let data = {
+        //     name: "小徐",
+        //     age: 20
+        // }
+
+        // let namevalue=data.name//单个变量的赋值
+        //但是有可能对象里面有多个变量，我们要遍历对象
+            // for (let key in data) {
+            //     let value=data[key]
+            //     Object.defineProperty(data,key,{
+            //         get() {
+            //             return value
+            //         },
+            //         set() {
+
+            //         }
+            //     })
+
+            // }
+
+
+        //检测是数据属性还是访问属性
+    // console.log(Object.getOwnPropertyDescriptor(data,"name"))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+
+</body>
+
+</html>
